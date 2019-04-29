@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+
     <style>
         table {
             /*border-collapse: collapse;*/
@@ -17,7 +20,11 @@
             padding: 3px;
         }
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 </head>
 
 <body>
@@ -76,6 +83,20 @@
         }
         if (knof.key == "d") {
             player.r = 1;
+        }
+    });
+
+    $("body").on("swipeleft", function(){
+        player.r--;
+        if(player.r < 0){
+            player.r = 3;
+        }
+    });
+
+    $("body").on("swiperight", function(){
+        player.r++;
+        if(player.r > 3){
+            player.r = 0;
         }
     });
 
