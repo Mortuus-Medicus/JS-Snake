@@ -15,8 +15,8 @@
         td,
         th {
             border: 0px solid #000000;
-            height: 38px;
-            width: 38px;
+            height: 28px;
+            width: 28px;
             padding: 3px;
         }
     </style>
@@ -28,9 +28,9 @@
 </head>
 
 <body>
-    <h2>12. naloga- jQuery DOM</h2>
-    <h1>Točke: <span id="tocke" style="color: greenyellow">0</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
-            id="stanje" style="color: red">WASD - za gibanje!</span></h1>
+    <h2>Snake</h2>
+    <h1>Score: <span id="tocke" style="color: greenyellow">0</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+            id="stanje" style="color: red">WASD to move!</span></h1>
     <span id="izpis"></span>
 
 </body>
@@ -200,7 +200,7 @@
     function draw() {
         var izpis = "<table>";
         if (gamestate != true) {
-            $("#stanje").html("KONEC SI!");
+            $("#stanje").html("GAME OVER");
         } else {
             for (var y = 1; y < height - 1; y++) {
                 izpis += "<tr>";
